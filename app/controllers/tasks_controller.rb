@@ -12,7 +12,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(title: "...", description: "...", due_date: "...")
+    @task = Task.new(task_params)
 
     if @task.save
       redirect_to @task
