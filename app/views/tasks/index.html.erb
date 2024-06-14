@@ -2,9 +2,10 @@
 <ul>
   <% @tasks.each do |task| %>
     <li>
-      <a href="/tasks/<%= task.id %>">
-        <%= task.title %>
+      <%= link_to task.title, task %>
       </a>
     </li>
   <% end %>
 </ul>
+
+<%= link_to "New Task", new_task_path %>
