@@ -37,13 +37,13 @@ class TasksController < ApplicationController
 
   def destroy
     @task = Task.find(params[:id])
-    @task.destroy
+    @task.destroy!
 
     redirect_to root_path, status: :see_other
   end
 
   private
     def task_params
-      params.require(:task).permit(:title, :description, :due_date)
+      params.require(:task).permit(:title, :description, :due_at)
     end
 end

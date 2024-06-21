@@ -16,9 +16,9 @@
   </div>
 
   <div>
-    <%= form.label :due_date %><br>
-    <%= form.text_field :due_date %>
-    <% task.errors.full_messages_for(:due_date).each do |message| %>
+    <%= form.label :due_at %><br>
+    <%= form.datetime_select :due_at %>
+    <% task.errors.full_messages_for(:due_at).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
