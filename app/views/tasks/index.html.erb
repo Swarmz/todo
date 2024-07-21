@@ -1,11 +1,11 @@
 <h1>Tasks</h1>
-<ul>
+<ul class="list-group">
   <% @tasks.each do |task| %>
-    <li>
+    <li class="list-group-item">
       <%= link_to task.title, task %>
       </a>
     </li>
   <% end %>
 </ul>
 
-<%= link_to "New Task", new_task_path %>
+<%= link_to "New Task", new_task_path, class: "btn btn-primary" %>

@@ -1,29 +1,29 @@
 <%= form_with model: task do |form| %>
-  <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
+  <div class="form-group">
+    <%= form.label :title, class: "form-label" %><br>
+    <%= form.text_field :title, class: "form-control" %>
     <% task.errors.full_messages_for(:title).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
 
-  <div>
-    <%= form.label :description %><br>
-    <%= form.text_area :description %>
+  <div class="form-group">
+    <%= form.label :description, class: "form-label" %><br>
+    <%= form.text_area :description, class: "form-control" %>
     <% task.errors.full_messages_for(:description).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
 
-  <div>
-    <%= form.label :due_at %><br>
-    <%= form.datetime_select :due_at %>
+  <div class="form-group">
+    <%= form.label :due_at, class: "form-label" %><br>
+    <%= form.datetime_select :due_at, class: "form-control" %>
     <% task.errors.full_messages_for(:due_at).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>
